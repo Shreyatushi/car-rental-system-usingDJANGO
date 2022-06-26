@@ -1,0 +1,143 @@
+header{
+    text-align: center !important;
+    color: pink !important;
+    font-size: 70px !important;
+    font-weight: 500 !important;
+}
+.user{
+    position: absolute !important;
+    top: 0px !important;
+    right: 0px !important;
+}
+.heading{
+    text-align: center !important;
+    font-size: 50px !important;
+    color: pink !important;
+}
+.heading span{
+    font-weight: 500 !important;
+}
+
+.heading p{
+    font-size: 20px !important;
+    color: black !important;
+}
+/*#van{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+}*/
+.car-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.car-container .box{
+    flex: 5 5;
+    flex-basis: 400px;
+    flex-direction: row;
+    position: relative;
+    height: 320px;
+    /*width: 100px;*/
+    border-radius: 0.5rem;
+    /*justify-content: space-evenly;*/
+    overflow: hidden hidden;
+}
+
+.car-container .box img{
+    width: 100%;
+    height: 100%;
+    /*background-size: cover;*/
+    /*object-fit: cover;*/
+    overflow: hidden;
+}
+
+.car-container .box img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.car-container .box h3{
+    position: absolute;
+    bottom: 20px;
+    left: 2px;
+    margin: 5px;
+    border: 2px;
+    border-radius: 0.5rem;
+    padding: 5px;
+    background-color: white;
+}
+.car-container .box h4{
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    margin: 5px;
+    border: 2px;
+    padding: 5px;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+.car-container .box:hover h3{
+    background-color:pink;
+}
+.car-container .box:hover h4{
+    background-color:pink;
+}
+.form-container form{
+    width: 90%;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 1 rem !important;
+    position: absolute !important;
+    left: 50px !important;
+    background:rgb(243, 204, 131) !important;
+    padding: 15px !important;
+    border-radius: 0.5rem !important;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+}
+.input-box{
+    flex: 1 1 10rem;
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+.input-box span{
+    font-weight: 500;
+}
+
+.input-box input{
+    padding: 7px;
+    background: #eeeff1;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.input-box #cars{
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    background: #eeeff1;
+}
+
+.form-container form .btn{
+    flex: 1 1 7rem;
+    padding: 2px 20px;
+    border: none;
+    border-radius: 0.5rem;
+    background: pink;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.form-container form .btn:hover{
+    background: rgb(133, 133, 187);
+}

@@ -1,0 +1,71 @@
+h1{
+    text-align: center;
+}
+.container{
+    display:block;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 5% 0;
+    border: 5px solid blueviolet;
+    /*text-align: center;*/
+}
+.elements{
+    padding: 10% 0;
+}
+.otherchoice{
+    padding: 10% 0;
+    text-align: center;
+}
+.form-inputs{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    height: 30px;
+    width: 200px;
+    position: absolute;
+}
+.form-inputs{
+    margin: 10px;
+    padding: 10px;
+}
+.form-control{
+    text-align: center;
+}
+.container input{
+    /*cursor: pointer;*/
+    height: 25px;
+}
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: lightseagreen; /* Seagreen */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <header>BookYourCar</header>
+        {% load static %}
+        <link rel = "stylesheet" href = "{% static 'styles_rent.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    </head>
+    <body>
+        <div class="user">
+                <i class="glyphicon glyphicon-user"></i><br>
+                <h5>Welcome {{request.user}}</h3>
+                <button class="lgout"><a href="/logout">Logout</a></button>
+        </div>
+        <br><br><br><br><br><br>
+        <section class = "ride" id = "ride">
+            <div class = "form-container">
+                <form action ="/rent" method="post"> 
+                    {% csrf_token %}
+                    <div class = "input-box">
+                        <span>Location</span>
+                        <input type = "search" name = "location" id = "" placeholder = "Search Places">
+                    </div>
+                    <div class = "input-box">
+                        <span>Pick-Up date</span>
+                        <input type = "date" name = "pick_up_date" id = "">
+                    </div>
+                    <div class = "input-box">
+                        <span>Return Date</span>
+                        <input type = "date" name = "return_date" id = "">
+                    </div>
+                    <div class = "input-box">
+                        <span>Select a Car</span>
+                        <select name="cars" id="cars">
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Convertible">Convertible</option>
+                                <option value="Van">Van</option>
+                                <option value="Mini-Van">Mini-Van</option>
+                                <option value="CUV">CUV</option>
+                        </select>
+                    </div>
+                    <div class = "buttons">
+                    <!--<input type = "submit" name = "" id = "" class = "btn" value = "Select a driver">
+                    OR<br>-->
+                    <input type = "submit" name ="" id = "" class = "btn" value = "Make Payment">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <br><br><br><br><br><br><br>
+        <section class = "cars">
+        <div class = "heading">
+            <span>All Cars</span>
+            <p>A list of all the cars provided by our company. Please select according to your requirement.</p>
+        </div>
+        <div class = "car-container">
+
+                <!--<script>
+                    localStorage.setItem("firstname", "Smith");
+                </script>-->
+            <div class = "box">
+                    <img src = "{% static 'car-1.jpg' %}" alt = "">
+                    <h3>Sedan</h3>
+                    <h4>Cost: Rs. 1000/day</h4>
+                </div>
+            <div class = "box">
+                <img src = "{% static 'car-2.jpg' %}" alt = "">
+                <h3>SUV</h3>
+                <h4>Cost: Rs. 1000/day</h4>
+            </div>
+            <div class = "box">
+                <img src = "{% static 'car-3.jpg' %}" alt = "">
+                <h3>Convertible</h3>
+                <h4>Cost: Rs. 1200/day</h4>
+            </div>
+            <div class = "box" id = "van">
+                <img src = "{% static 'car-5.jpg' %}" alt = "">
+                <h3>Van</h3>
+                <h4>Cost: Rs. 800/day</h4>
+            </div>
+            <div class = "box">
+                <img src = "{% static 'car-4.jpg' %}" alt = "">
+                <h3>Mini-van</h3>
+                <h4>Cost: Rs. 900/day</h4>
+            </div>
+            <div class = "box">
+                    <img src = "{% static 'car-6.jpg' %}" alt = "">
+                    <h3>CUV</h3>
+                    <h4>Cost: Rs. 1100/day</h4>
+            </div>
+        </div>
+        </section>
+    </body>
+</html>
