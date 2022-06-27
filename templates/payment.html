@@ -10,61 +10,17 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles_payment.css' %}">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <!--<form action="success" method="post">
-        
-        {% csrf_token %}-->
-        
-        <!--Amount : {{amount}}<br>
-        <button id="rzp-button1">Pay</button>
-        <script src="https://checkout.razorpay.com/v1/checkout.js">
-            var options = {
-                "key": "{{api_key}}", // Enter the Key ID generated from the Dashboard
-                "name": "Acme Corp",
-                "description": "Test Transaction",
-                "image": "https://example.com/your_logo",
-                "order_id": "{{order_id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-                "handler": function (response){
-                alert(response.razorpay_payment_id);
-                alert(response.razorpay_order_id);
-                alert(response.razorpay_signature)
-            },
-            "prefill": {
-            "name": "Gaurav Kumar",
-            "email": "gaurav.kumar@example.com",
-            "contact": "9999999999"
-            },
-            "notes": {
-            "address": "Razorpay Corporate Office"
-            },
-            "theme": {
-            "color": "#3399cc"
-            }
-            };
-            var rzp1 = new Razorpay(options);
-            rzp1.on('payment.failed', function (response){
-            alert(response.error.code);
-            alert(response.error.description);
-            alert(response.error.source);
-            alert(response.error.step);
-            alert(response.error.reason);
-            alert(response.error.metadata.order_id);
-            alert(response.error.metadata.payment_id);
-            });
-            document.getElementById('rzp-button1').onclick = function(e){
-            rzp1.open();
-            e.preventDefault();
-            }
-           </script>
-           </form>-->
-           <h1>Donate now</h1>
+           <br><br><br><br>
+           <form class="form-container">
+           <div class="text">
+               <h1>Pay now {{amount}}</h1>
+           </div>
            <div id="paypal-button-container"></div>
-
+           </form>
     <!-- Include the PayPal JavaScript SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=AUGjJ6ON9tjOvsfQSV4oNSBrdZluEWWM2dc_bTO0IlB_lPTw7kYfQ00Jh3DqjjVp1KCs79bD-4M_9s4d&currency=USD"></script>
 

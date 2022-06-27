@@ -9,5 +9,7 @@ urlpatterns = [
     path("rent",views.rent,name='rent'),
     path("payment",views.payment,name='payment'),
     path("success",views.success,name='success'),
-    path("cancel",views.cancel,name='cancel')
+    path("cancel",views.cancel,name='cancel'),
+    path("booking_list",views.booking_list,name="booking_list"),
+    path("cancel_order",views.cancel_order,name='cancel_order')
 ]

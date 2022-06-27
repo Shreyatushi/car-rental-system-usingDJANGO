@@ -7,6 +7,7 @@ from django.contrib import messages
 import razorpay
 from django.views.decorators.csrf import csrf_exempt
 from datetime import date
+from django.http import HttpResponse
 # Create your views here.
 #password for user shreya is Shreya***000
 #password for user sreetama sree@135
@@ -112,3 +113,26 @@ def cancel(request):
     book.delete()
     book = None
     return redirect('/rent')
+
+def booking_list(request):
+    book = Booking.objects.filter(user_name=request.user.username)
+    context={
+        'booking_list' : book
+    }
+    return render(request,'booking_list.html',context)
+
+def cancel_order(request):
+    booking_id = request.GET['booking_id']
+    book = Booking.objects.filter(booking_no = booking_id).last()
+    print(book.user_name)
+    d1 = book.pickup_date
+    today = date.today()
+    if(today>d1):
+        return HttpResponse('Cannot cancel now. Too late!')
+    else:
+        book.delete()
+        book = None
+        return redirect('/rent')
+
+#<a href = "{% url '/cancel_order' booking_id = booking.booking_no %}">Cancel Order</a>
+#<a href = "{% url 'cancel_order' %}?booking_id={{booking.booking_no}}">Cancel Order</a>
